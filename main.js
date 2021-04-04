@@ -3,6 +3,7 @@ let CAPTCHA_SOLVED = false;
 window.onload = function() {
     let fb_id = document.querySelector("#fb_id");
     let search_button = document.querySelector("#search");
+    let loading = document.querySelector("#loading");
     let results = document.querySelector("#results");
     let error = document.querySelector("#error");
     fb_id.onchange = function() {
@@ -17,7 +18,9 @@ window.onload = function() {
     }
     search_button.onclick = function() {
         results.classList.add("hidden");
-        error.classList.add("hidden");     
+        error.classList.add("hidden");   
+        loading.classList.remove("hidden") 
+        search_button.disabled = false; 
         let username = fb_id.value;
         let challenge = document.querySelector("[name=h-captcha-response]")
         let formData = new FormData();
@@ -29,6 +32,7 @@ window.onload = function() {
         })
         .then(response => response.json())
         .then(data => {
+            loading.classList.add("hidden")
             if ("error" in data) {
                 error.classList.remove("hidden");
             } else {
@@ -50,7 +54,7 @@ window.onload = function() {
     }
 }
 
-function onCaptchaSucess(e) {
+function onCaptchaSuccess() {
     CAPTCHA_SOLVED = true
     let fb_id = document.querySelector("#fb_id")
     let search_button = document.querySelector("#search")
@@ -59,4 +63,9 @@ function onCaptchaSucess(e) {
     } else {
         search_button.disabled = true
     }
+}
+
+function onCaptchaExpired() {
+    let search_button = document.querySelector("#search")
+    search_button.disabled = true
 }

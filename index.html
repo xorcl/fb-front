@@ -42,12 +42,28 @@
           <input type="text" class="form-input" id="fb_id" placeholder="zuck">
           <button id="search" disabled class="btn btn-primary input-group-btn"><span class="mdi mdi-magnify"></span></button>
       </div>
-      <div class="text-center h-captcha" style="padding-top:10px" data-sitekey="5ca0c57a-e149-4dac-824b-af157a45070e" data-theme="dark"></div>
+      <div class="text-center h-captcha" style="padding-top:10px" data-sitekey="5ca0c57a-e149-4dac-824b-af157a45070e" data-theme="dark" data-callback="onCaptchaSuccess" data-expired-callback="onCaptchaExpired" data-chalexpired-callback="onCaptchaExpired"></div>
     </div>	
     <div class="container">
       <div class="columns">
         <div class="column col-8 col-md-12 col-mx-auto">
-          <div class="error toast text-center hidden">
+          <div id="loading" class="text-center hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  width="50px" height="50px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">
+              <rect x="17.5" y="30" width="15" height="40" fill="#85a2b6">
+                <animate attributeName="y" repeatCount="indefinite" dur="1s" calcMode="spline" keyTimes="0;0.5;1" values="18;30;30" keySplines="0 0.5 0.5 1;0 0.5 0.5 1" begin="-0.2s"></animate>
+                <animate attributeName="height" repeatCount="indefinite" dur="1s" calcMode="spline" keyTimes="0;0.5;1" values="64;40;40" keySplines="0 0.5 0.5 1;0 0.5 0.5 1" begin="-0.2s"></animate>
+              </rect>
+              <rect x="42.5" y="30" width="15" height="40" fill="#bbcedd">
+                <animate attributeName="y" repeatCount="indefinite" dur="1s" calcMode="spline" keyTimes="0;0.5;1" values="20.999999999999996;30;30" keySplines="0 0.5 0.5 1;0 0.5 0.5 1" begin="-0.1s"></animate>
+                <animate attributeName="height" repeatCount="indefinite" dur="1s" calcMode="spline" keyTimes="0;0.5;1" values="58.00000000000001;40;40" keySplines="0 0.5 0.5 1;0 0.5 0.5 1" begin="-0.1s"></animate>
+              </rect>
+              <rect x="67.5" y="30" width="15" height="40" fill="#dce4eb">
+                <animate attributeName="y" repeatCount="indefinite" dur="1s" calcMode="spline" keyTimes="0;0.5;1" values="20.999999999999996;30;30" keySplines="0 0.5 0.5 1;0 0.5 0.5 1"></animate>
+                <animate attributeName="height" repeatCount="indefinite" dur="1s" calcMode="spline" keyTimes="0;0.5;1" values="58.00000000000001;40;40" keySplines="0 0.5 0.5 1;0 0.5 0.5 1"></animate>
+              </rect>
+            </svg>
+          </div>
+          <div id="error" class="toast text-center hidden">
             <p class="error-text">
               No pudimos obtener datos sobre tu cuenta. Intenta de nuevo más tarde.
             </p>
