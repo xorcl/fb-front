@@ -22,7 +22,7 @@ window.onload = function() {
         loading.classList.remove("hidden") 
         search_button.disabled = false; 
         let username = fb_id.value;
-        let challenge = document.querySelector("[name=h-captcha-response]")
+        let challenge = document.querySelector("[name=h-captcha-response]").value
         let formData = new FormData();
         formData.append('username', username);
         formData.append('h-captcha-response', challenge);
