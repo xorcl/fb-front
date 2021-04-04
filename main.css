@@ -45,3 +45,11 @@ a.navbar-brand:active,
 .ok {
     color: #12a081
 }
+
+.hidden {
+    display: none;
+}
+
+.error-text {
+    font-size: larger;
+}
