@@ -37,18 +37,19 @@ window.onload = function() {
                 error.classList.remove("hidden");
             } else {
                 for (const [prop, value] of Object.entries(data.data)) {
-                    let data_tr = document.querySelector(`#${prop}`)
+                    let data_tr = document.querySelector(`#${prop}`);
                     let warning = data_tr.querySelector(".warning");
                     let ok = data_tr.querySelector(".ok");
                     if (value === true) {
-                        warning.classList.remove("hidden")
-                        ok.classList.add("hidden")
+                        warning.classList.remove("hidden");
+                        ok.classList.add("hidden");
                     } else {
-                        ok.classList.remove("hidden")
-                        warning.classList.add("hidden")
+                        ok.classList.remove("hidden");
+                        warning.classList.add("hidden");
                     }
                 }
-                results.classList.remove("hidden")
+                results.classList.remove("hidden");
+                hcaptcha.reset();
             }
         });
     }
