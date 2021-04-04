@@ -35,6 +35,7 @@ window.onload = function() {
             loading.classList.add("hidden")
             if ("error" in data) {
                 error.classList.remove("hidden");
+                hcaptcha.reset();
             } else {
                 for (const [prop, value] of Object.entries(data.data)) {
                     let data_tr = document.querySelector(`#${prop}`);
