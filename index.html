@@ -1,45 +1,123 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <head>
+    <title>¿Se filtraron mis datos de Facebook?</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>¿Se filtraron mis datos de Facebook? - xor.cl</title>
-    <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" href="spectre.css">
+    <meta charset="utf-8">
     <link rel="stylesheet" href="spectre-exp.css">
-    <link rel="stylesheet" href="spectre-icons.css">
-</head>
-<body>
-    <div class="container">
-        <div class="hero bg-gray">
-            <div class="hero-body centered">
-              <h1>¿Se filtraron mis datos de Facebook?</h1>
-              <p>Copia tu ID de facebook acá para ver qué datos se filtraron.</p>
-              <div class="form-group">
-                <label class="form-label" for="fb_id">ID de Facebook</label>
-                <input class="form-input" type="text" id="fb_id" placeholder="ID de Facebook">
-              </div>
-              <div class="results">
-                  <p><b>Teléfono:</b> <span id="phone">Sí</span></p>
-                  <p><b>Nombre:</b> <span id="first_name">Sí</span></p>
-                  <p><b>Apellido:</b> <span id="last_name">Sí</span></p>
-                  <p><b>Género:</b> <span id="gender">Sí</span></p>
-                  <p><b>Ciudad de Origen:</b> <span id="location_1">Sí</span></p>
-                  <p><b>Ciudad Actual:</b> <span id="location_2">Sí</span></p>
-                  <p><b>Situación Sentimental:</b> <span id="relationship_status">Sí</span></p>
-                  <p><b>Lugar de Trabajo o Estudio:</b> <span id="work_place">Sí</span></p>
-                  <p><b>Correo Electrónico:</b> <span id="email">Sí</span></p>
-                  <p><b>Fecha de Nacimiento:</b> <span id="email">Sí</span></p>
-                </div>
-            </div>
+    <link rel="stylesheet" href="materialdesignicons.min.css">
+    <link rel="stylesheet" href="spectre.css">
+    <link rel="stylesheet" href="main.css">
+  <style>
+      .column li { list-style: none; color: red; margin-top: 0; margin-bottom: 0; }
+    </style>
+  </head>
+  <body>
+    <header class="navbar">
+      <section class="navbar-primary">	
+        <a href="#" class="navbar-brand">
+          fb.
+          <svg class="logo" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" class="w-10 h-10" viewBox="-5 -10 70 70">
+            <g transform="translate(-50.944176,-83.624869)">
+              <path transform="matrix(0.26458333,0,0,0.26458333,59.630984,82.609427)" d="M 43.019531,3.8378906 A 75.85101,75.85101 0 0 0 -32.832031,79.689453 75.85101,75.85101 0 0 0 43.019531,155.53906 75.85101,75.85101 0 0 0 80.978516,145.35742 75.85101,75.85101 0 0 1 43.085938,79.689453 75.85101,75.85101 0 0 1 80.978516,14.019531 75.85101,75.85101 0 0 0 43.019531,3.8378906 Z M 80.978516,14.019531 A 75.85101,75.85101 0 0 1 118.86914,79.689453 75.85101,75.85101 0 0 1 80.978516,145.35742 75.85101,75.85101 0 0 0 118.9375,155.53906 75.85101,75.85101 0 0 0 194.78906,79.689453 75.85101,75.85101 0 0 0 118.9375,3.8378906 75.85101,75.85101 0 0 0 80.978516,14.019531 Z"></path>
+            </g>  
+        </svg>.cl
+        </a>
+      </section>
+      <section class="navbar-section">
+        <a href="#" class="btn-link btn">FAQ</a>
+        <a href="#" class="btn-link btn">Acerca</a> 
+      </section>
+    </header>
+
+    <div class="container centered">
+      <h1 class="text-center" style="margin-top: 5%;">¿Se filtraron mis datos de Facebook?</h1>
+      <p class="text-center text-large">Copia el link a tu perfil de Facebook para revisar qué datos se filtraron</p>
+      <p class="text-center text-small"> No te preocupes, no mantenemos los datos, solo sabemos si fueron o no publicados en la filtración.</p>
+      <div class="input-group" style="margin-left: 25%; margin-right: 25%;">
+          <span class="input-group-addon">https://www.facebook.com/</span>
+          <input type="text" class="form-input" id="fb_id" placeholder="zuck">
+          <button class="btn btn-primary input-group-btn"><span class="mdi mdi-magnify"></span></button>
+      </div>
+    </div>	
+    <div class="results container">
+      <div class="columns">
+        <div class="column col-8 col-md-12 col-mx-auto">
+          <table class="table">
+            <tbody>
+              <tr>
+                <td><span class="mdi mdi-phone"></span> Teléfono</td>
+                <td>
+                  <span class="mdi mdi-alert warning"></span> Comprometido
+                  <span class="mdi mdi-checkbox-marked-circle ok"></span> No Comprometido
+                </td>
+              </tr>
+              <tr>
+                <td><span class="mdi mdi-account"></span> Nombre</td>
+                <td>
+                  <span class="mdi mdi-alert warning"></span> Comprometido
+                  <span class="mdi mdi-checkbox-marked-circle ok"></span> No Comprometido
+                </td>              </tr>
+              <tr>
+                <td><span class="mdi mdi-account"></span> Apellido</td>
+                <td>
+                  <span class="mdi mdi-alert warning"></span> Comprometido
+                  <span class="mdi mdi-checkbox-marked-circle ok"></span> No Comprometido
+                </td>
+              </tr>
+              <tr>
+                <td><span class="mdi mdi-checkbox-blank-circle-outline"></span> Género</td>
+                <td>
+                  <span class="mdi mdi-alert warning"></span> Comprometido
+                  <span class="mdi mdi-checkbox-marked-circle ok"></span> No Comprometido
+                </td>
+              </tr>
+              <tr>
+                <td><span class="mdi mdi-city"></span> Ciudad de Origen</td>
+                <td>
+                  <span class="mdi mdi-alert warning"></span> Comprometido
+                  <span class="mdi mdi-checkbox-marked-circle ok"></span> No Comprometido
+                </td>
+              </tr>
+              <tr>
+                <td><span class="mdi mdi-map-marker"></span> Ciudad Actual</td>
+                <td>
+                  <span class="mdi mdi-alert warning"></span> Comprometido
+                  <span class="mdi mdi-checkbox-marked-circle ok"></span> No Comprometido
+                </td>
+              </tr>
+              <tr>
+                <td><span class="mdi mdi-heart-circle"></span> Situación Sentimental</td>
+                <td>
+                  <span class="mdi mdi-alert warning"></span> Comprometido
+                  <span class="mdi mdi-checkbox-marked-circle ok"></span> No Comprometido
+                </td>
+              </tr>
+              <tr>
+                <td><span class="mdi mdi-briefcase"></span> Lugar de Trabajo o Estudio</td>
+                <td>
+                  <span class="mdi mdi-alert warning"></span> Comprometido
+                  <span class="mdi mdi-checkbox-marked-circle ok"></span> No Comprometido
+                </td>
+              </tr>
+              <tr>
+                <td><span class="mdi mdi-email"></span> Correo Electrónico</td>
+                <td>
+                  <span class="mdi mdi-alert warning"></span> Comprometido
+                  <span class="mdi mdi-checkbox-marked-circle ok"></span> No Comprometido
+                </td>
+              </tr>
+              <tr>
+                <td><span class="mdi mdi-cake"></span> Fecha de Nacimiento</td>
+                <td>
+                  <span class="mdi mdi-alert warning"></span> Comprometido
+                  <span class="mdi mdi-checkbox-marked-circle ok"></span> No Comprometido
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </div>
-        <div class="columns">
-          <div class="column col-12">
-            <h4>¿Qué pasó con Facebook?</h4>
-            <p>Esto pasó</p>
-          </div>
-        </div>
-      </div>    
-</body>
+      </div>        
+    </div>
+  </body>
 </html>

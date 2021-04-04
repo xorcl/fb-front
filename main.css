@@ -4,3 +4,44 @@
 .results p {
     margin: 0
 }
+
+.logo {
+    display: inline;
+    height: 50px;
+    margin-bottom: -20px;
+    fill: #fff;
+
+}
+
+.navbar {
+    padding: 1rem;
+    color: #fff;
+    background-color: #000;
+    box-shadow: 2px 2px 2px lightgrey;
+}
+
+.navbar-brand,
+.navbar-section .btn.btn-link
+{
+    color: #fff;
+}
+
+a.navbar-brand:hover,
+a.navbar-brand:focus,
+a.navbar-brand:active,
+.navbar-section .btn.btn-link:focus,
+.navbar-section .btn.btn-link:hover,
+.navbar-section .btn.btn-link:active,
+.logo:hover
+{
+    color: #ccc;
+    fill: #ccc;
+}
+
+.warning {
+    color: #ecba16
+}
+
+.ok {
+    color: #12a081
+}
