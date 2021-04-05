@@ -8,7 +8,7 @@ window.onload = function() {
     let error = document.querySelector("#error");
     fb_id.onchange = function() {
         let text = fb_id.value;
-        id = text.replace(/https?\:\/\/(www\.)?facebook\.com\.?\//,"").replace(/[^A-Za-z0-9.]+/g, "");
+        id = text.replace(/(https?\:\/\/)?(www\.)?facebook\.com\.?\//,"").replace(/[^A-Za-z0-9.]+/g, "");
         fb_id.value = id;
         if (fb_id.value.length > 0 && CAPTCHA_SOLVED) {
             search_button.disabled = false;
@@ -37,6 +37,7 @@ window.onload = function() {
             if ("error" in data) {
                 error.classList.remove("hidden");
                 hcaptcha.reset();
+                HCAPTCHA_SOLVED = false;
             } else {
                 for (const [prop, value] of Object.entries(data.data)) {
                     let data_tr = document.querySelector(`#${prop}`);
@@ -54,6 +55,7 @@ window.onload = function() {
                 }
                 results.classList.remove("hidden");
                 hcaptcha.reset();
+                HCAPTCHA_SOLVED = false;
             }
         });
     }
@@ -72,5 +74,6 @@ function onCaptchaSuccess() {
 
 function onCaptchaExpired() {
     let search_button = document.querySelector("#search")
-    search_button.disabled = true
+    search_button.disabled = true;
+    HCAPTCHA_SOLVED = false;
 }
