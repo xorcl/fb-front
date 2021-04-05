@@ -31,21 +31,26 @@
     </header>
 
     <div class="container centered">
-      <h1 class="text-center" style="margin-top: 5%;">&#x1F1E8;&#x1F1F1; ¿Se filtraron mis datos de Facebook?</h1>
-      <p class="text-center text-large">Si tienes un número chileno asociado a tu cuenta de Facebook, ingresa el link de tu perfil para revisar qué datos se filtraron.</p>
-      <p class="text-center text-small">(No tenemos los datos, solo contamos con información de si fueron o no publicados en la filtración.)</p>
-      <div class="input-group" style="max-width: 1000px;margin:auto">
-          <span class="input-group-addon">https://www.facebook.com/</span>
-          <input type="text" class="form-input" id="fb_id" placeholder="zuck">
-      </div>
-      <div class="text-center h-captcha" style="padding-top:10px" data-sitekey="5ca0c57a-e149-4dac-824b-af157a45070e" data-theme="dark" data-callback="onCaptchaSuccess" data-expired-callback="onCaptchaExpired" data-chalexpired-callback="onCaptchaExpired"></div>
-      <div class="text-center">
-        <button id="search" disabled class="btn btn-primary input-group-btn"><span class="mdi mdi-magnify"></span> Buscar Usuario</button>
+      <div class="columns">
+        <div class="column col-10 col-mx-auto">
+          <h1 class="text-center" style="margin-top: 5%;">&#x1F1E8;&#x1F1F1; ¿Se filtraron mis datos de Facebook?</h1>
+          <p class="info-text text-center text-large">Si tienes un número chileno asociado a tu cuenta de Facebook, ingresa el link de tu perfil para revisar qué datos se filtraron.</p>
+          <p class="subtext text-center text-small">(No tenemos los datos, solo contamos con información de si fueron o no publicados en la filtración.)</p>
+          <div class="input-group" style="max-width: 1000px;margin:auto">
+              <span class="input-group-addon">https://www.facebook.com/</span>
+              <input type="text" class="form-input" id="fb_id" placeholder="zuck">
+          </div>
+          <div class="text-center h-captcha" style="padding-top:10px" data-sitekey="5ca0c57a-e149-4dac-824b-af157a45070e" data-theme="dark" data-callback="onCaptchaSuccess" data-expired-callback="onCaptchaExpired" data-chalexpired-callback="onCaptchaExpired"></div>
+          <div class="text-center">
+            <button id="search" disabled class="btn btn-primary input-group-btn"><span class="mdi mdi-magnify"></span> Buscar Usuario</button>
+          </div>
+    
+        </div>
       </div>
     </div>	
     <div class="container">
       <div class="columns">
-        <div class="column col-8 col-md-12 col-mx-auto">
+        <div class="column col-8 col-md-10 col-mx-auto">
           <div id="loading" class="text-center hidden">
             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  width="50px" height="50px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">
               <rect x="17.5" y="30" width="15" height="40" fill="#85a2b6">
@@ -182,7 +187,7 @@
             </tbody>
           </table>
         </div>
-        <div class="column col-8 col-md-12 col-mx-auto text-center">
+        <div class="column col-8 col-md-10 col-mx-auto">
           <h1 id="faq">Preguntas Frecuentes</h1>
           <div class="question">
             <h3>En pocas palabras, ¿qué pasó con las cuentas de Facebook?</h3>
@@ -212,9 +217,9 @@
           </div>
           <div class="question">
             <h3>¿Cómo me afecta esto personalmente?</h3>
-            <p>Puede que creas que como algunos de estos datos son públicos, en realidad su filtración no te genera ningún problema. Sin embargo, lo valioso de esta filtración es que <b>estos datos personales se filtraron todos juntos.</b></p>
+            <p>Puede que creas que como algunos de estos datos son públicos, en realidad su filtración no te genera ningún problema. Sin embargo, lo peligroso de esta filtración es que <b>estos datos personales se filtraron todos juntos. Es decir, cualquier persona en poder de esta información puede saber desde ya cómo te llamas al momento de llamar al número filtrado, o cuándo es tu cumpleaños, de qué ciudad vienes o si estás o no en una relación sentimental. </b></p>
             
-            <p>Es decir, cualquier persona en poder de esta información puede saber desde ya cómo te llamas al momento de llamar al número filtrado, o cuándo es tu cumpleaños, de qué ciudad vienes o si estás o no en una relación sentimental. Esta información puede ser útil para muchas cosas, como por ejemplo, para resolver <b>preguntas de seguridad</b> en alguna cuenta de Internet que uses. Incluso puede servir para realizar <b>campañas de phishing</b> o <b>llamadas fraudulentas (tipo "cuento del tío")</b> muy personalizadas, de forma que te cueste cada vez más reconocer si la comunicación que estás recibiendo es real o no.
+            <p>Esta información puede ser útil para muchas cosas, como por ejemplo, para que un desconocido pueda resolver <b>preguntas de seguridad</b> en alguna cuenta de Internet que uses, o incluso abrir un producto financiero a tu nombre con esos datos. En el peor de los casos, la información filtrada también puede servir para realizar <b>campañas de phishing</b> o <b>llamadas fraudulentas (tipo "cuento del tío")</b> muy personalizadas, de forma que te cueste cada vez más reconocer si la comunicación que estás recibiendo es real o no.
           </div>
           <div class="question">
             <h3>¿Debo cambiar mi contraseña?</h3>
@@ -235,8 +240,8 @@
             <p>Al final, la mejor estrategia de prevención y cuidado es <b>estar siempre atento y mantener una actitud crítica y precavida</b> frente a cada interacción realizada en la Internet.</p>
           </div>
         </div>
-        <div class="column col-8 col-md-12 col-mx-auto text-center">
-          <h1 id="acerca">Acerca de este sitio web</h1>
+        <div class="column col-8 col-md-10 col-mx-auto question">
+          <h1 id="acerca" class="text-center">Acerca de este sitio web</h1>
           <p>Este sitio fue creado con el objetivo de aterrizar un poco los efectos de la filtración pública y masiva de datos de Facebook de hace unos días.</p>
           <p><b>Sobre los datos usados para entregar información de filtrado:</b> Ni este sitio ni la API que lo sustenta poseen una copia de los datos filtrados. Lo único que se posee es un conjunto indicadores (Sí/No) asociados a cada ID de cuenta presente en la filtración, el cual sirve para determinar qué datos estaban presentes en la filtración para cada cuenta de Facebook asociada a un teléfono chileno.</p>
           <p><b>Sobre el CAPTCHA:</b> Con el objetivo de evitar el abuso del sistema, el formulario utiliza un CAPTCHA. El CAPTCHA utilizado es el mismo que utiliza el Servel, aunque con una dificultad un poco menor. Se pueden leer los <a href="https://hcaptcha.com/privacy">términos de servicio</a> y la <a href="https://hcaptcha.com/privacy">política de privacidad</a> de hCaptcha en los links anteriores.</p>

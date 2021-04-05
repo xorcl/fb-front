@@ -66,3 +66,20 @@ h1, h2, h3 {
 img {
     width: 100%;
 }
+
+h1 {
+    font-size: 2.5em;
+}
+
+h2 {
+    font-size: 2.2em;
+}
+
+h3, .info-text {
+    font-size: 1.8em;
+}
+
+.question p {
+    font-size:1.5em;
+    text-align: justify;
+}
