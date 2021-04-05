@@ -79,7 +79,7 @@ h3, .info-text {
     font-size: 1.8em;
 }
 
-.question p {
+.question p, li {
     font-size:1.5em;
     text-align: justify;
 }
