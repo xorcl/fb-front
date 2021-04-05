@@ -26,6 +26,10 @@
     color: #fff;
 }
 
+a {
+    text-decoration: underline;
+}
+
 a.navbar-brand:hover,
 a.navbar-brand:focus,
 a.navbar-brand:active,
@@ -36,6 +40,7 @@ a.navbar-brand:active,
 {
     color: #ccc;
     fill: #ccc;
+    text-decoration: underline;
 }
 
 .warning {
@@ -56,4 +61,8 @@ a.navbar-brand:active,
 
 h1, h2, h3 {
     margin: 40px 0 20px 0;
+}
+
+img {
+    width: 100%;
 }
