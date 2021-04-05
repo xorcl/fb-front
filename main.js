@@ -20,7 +20,7 @@ window.onload = function() {
         results.classList.add("hidden");
         error.classList.add("hidden");   
         loading.classList.remove("hidden") 
-        search_button.disabled = false; 
+        search_button.disabled = true; 
         let username = fb_id.value;
         let challenge = document.querySelector("[name=h-captcha-response]").value
         let formData = new FormData();
@@ -32,6 +32,7 @@ window.onload = function() {
         })
         .then(response => response.json())
         .then(data => {
+        
             loading.classList.add("hidden")
             if ("error" in data) {
                 error.classList.remove("hidden");
