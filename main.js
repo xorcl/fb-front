@@ -40,8 +40,8 @@ window.onload = function() {
                 for (const [prop, value] of Object.entries(data.data)) {
                     let data_tr = document.querySelector(`#${prop}`);
                     if (data_tr !== null) {
-                        let warning = data_tr.querySelector(".warning");
-                        let ok = data_tr.querySelector(".ok");
+                        let warning = data_tr.querySelector(".warning").parentNode;
+                        let ok = data_tr.querySelector(".ok").parentNode;
                         if (value === true) {
                             warning.classList.remove("hidden");
                             ok.classList.add("hidden");
