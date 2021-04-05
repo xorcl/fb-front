@@ -57,6 +57,10 @@ window.onload = function() {
                 hcaptcha.reset();
                 HCAPTCHA_SOLVED = false;
             }
+        }).catch( () => {
+            error.classList.remove("hidden");
+            hcaptcha.reset();
+            HCAPTCHA_SOLVED = false;
         });
     }
 }
